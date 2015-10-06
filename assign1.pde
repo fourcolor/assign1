@@ -6,7 +6,7 @@ PImage treasure;
 PImage enemy;
 PImage hp;
 
-int x=0,xx=0;
+int x=0,xx=640;
 int x1=(int)random(640),y1=(int)random(480);//treasure x y
 int x2=0,y2=(int)random(480);
 void setup () {
@@ -18,30 +18,23 @@ void setup () {
   enemy = loadImage("img/enemy.png");
   hp = loadImage("img/hp.png");
   
-  
+  // your code
 }
 
 void draw() {
   background(0);
   image(backGround1,x-640,0);
-  image(backGround2,x,0);
-  image(backGround1,xx-1920,0);
-  image(backGround2,xx-1280,0);
+  image(backGround2,xx-640,0);
   image(fighter,580,220);
   image(treasure,x1,y1);
   image(enemy,x2,y2);
   image(hp,1,1);
   fill(255,0,0,75);
   rect(151,5,59,20,100);
+  x%=1280;xx%=1280;
   x2+=3;x2%=640;
-  if(x==640)
-  {xx=640;}x+=1;
-  if(xx-1280==0)
-  {x=0;}
+  x+=1;
   xx+=1;
   
-
- 
-  
-  
+  // your code
 }
