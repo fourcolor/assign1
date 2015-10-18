@@ -6,9 +6,9 @@ PImage treasure;
 PImage enemy;
 PImage hp;
 
-int x=0,xx=640;
-int x1=(int)random(640),y1=(int)random(480);//treasure x y
-int x2=0,y2=(int)random(480);
+int x=0,xx=640,f=(int)random(200);
+int x1=(int)random(630),y1=(int)random(470);//treasure x y
+int x2=0,y2=(int)random(470);
 void setup () {
   size(640,480) ;  // must use this size.
   backGround1 = loadImage("img/bg1.png");
@@ -30,7 +30,7 @@ void draw() {
   image(enemy,x2,y2);
   image(hp,1,1);
   fill(255,0,0,75);
-  rect(151,5,59,20,100);
+  rect(10,5,r,20,100);
   x%=1280;xx%=1280;
   x2+=3;x2%=640;
   x+=1;
